@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Table</title>
+    {% load static %}
+    <link href="{% static 'css/pulbicser.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <a href="{% url 'create-disease' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New Disease</a>
+                            <a href="{% url 'home' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i>Go back</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                   <th><span>Disease Code</span></th>
+        <th><span>Pathogen</span></th>
+          <th><span>Description</span></th>
+          <th><span>ID</span></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                          {% for disease in diseases %}
+                            <tr>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <a href="{% url 'update-disease' disease.disease_code %}"><img src="{% static 'img/edit.png' %} " alt="HTML tutorial" style="width:35px;height:35px;"></a>
+                                    <a href="{% url 'delete-disease' disease.disease_code %}"><img src="{% static 'img/delete.png' %} " alt="HTML tutorial" style="width:35px;height:35px;"></a>
+                                </td>
+
+
+
+                    <td style="text-align: center; vertical-align: middle;">{{ disease.disease_code }}</td>
+                    <td style="text-align: center; vertical-align: middle;">{{ disease.pathogen }}</td>
+                    <td style="text-align: center; vertical-align: middle;">{{ disease.description }}</td>
+                    <td style="text-align: center; vertical-align: middle;">{{ disease.id }}</td>
+
+                            </tr>
+
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

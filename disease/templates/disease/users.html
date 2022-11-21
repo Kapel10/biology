@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+       {% load static %}
+     <link href="{% static 'css/pulbicser.css' %}" rel="stylesheet">
+</head>
+<body>
+        <div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <a href="{% url 'create-user' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New User</a>
+                            <a href="{% url 'home' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i>Go back</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Email</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Salary</th>
+                                <th>Phone number</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             {% for user in users %}
+                            <tr>
+                                <td style="text-align: center; vertical-align: middle;">
+                                    <a href="{% url 'update-user' user.email %}"><img src="{% static 'img/edit.png' %} " alt="HTML tutorial" style="width:35px;height:35px;"></a>
+                                    <a href="{% url 'delete-user' user.email %}"><img src="{% static 'img/delete.png' %} " alt="HTML tutorial" style="width:35px;height:35px;"></a>
+                                </td>
+                                 <td style="text-align: center; vertical-align: middle;">{{ user.email }}</td>
+                                <td style="text-align: center; vertical-align: middle;">{{ user.name }}</td>
+                                <td style="text-align: center; vertical-align: middle;">{{ user.surname }}</td>
+                                 <td style="text-align: center; vertical-align: middle;">{{ user.salary }}</td>
+                                    <td style="text-align: center; vertical-align: middle;">{{ user.phone }}</td>
+                                     <td style="text-align: center; vertical-align: middle;">{{ user.cname }}</td>
+
+                            </tr>
+
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+

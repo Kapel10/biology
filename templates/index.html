@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+     <link href="{% static 'css/frontpage.css' %}" rel="stylesheet">
+</head>
+<body>
+ <div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/disease_front.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Disease Types Table</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Disease Type ID</li>
+          <li class="pricing-features-item">Disease Type description</li>
+        </ul>
+        <a href="{% url 'diseasetypetable' %}" class="pricing-button">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/earth.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Country Table </h2>
+        <ul class="pricing-features">
+            <li class="pricing-features-item">Country Name</li>
+          <li class="pricing-features-item">Population</li>
+
+        </ul>
+        <a href="{% url 'countries' %}" class="pricing-button is-featured">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/covid.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Disease Table</h2>
+        <ul class="pricing-features">
+             <li class="pricing-features-item">Disease_code</li>
+          <li class="pricing-features-item">Pathogen</li>
+            <li class="pricing-features-item">Description</li>
+            <li class="pricing-features-item">Disease ID</li>
+        </ul>
+        <a href="{% url 'diseasetable' %}" class="pricing-button">View Table</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+ <div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/discover.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Discovery Table</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Country Name</li>
+          <li class="pricing-features-item">Disease Code</li>
+            <li class="pricing-features-item">First Encounter Day</li>
+        </ul>
+        <a href="{% url 'discovertable' %}" class="pricing-button is-featured">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/superuser.png' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Users Table </h2>
+        <ul class="pricing-features">
+            <li class="pricing-features-item">User email</li>
+          <li class="pricing-features-item">User name</li>
+            <li class="pricing-features-item">User surnmae</li>
+          <li class="pricing-features-item">Salary</li>
+            <li class="pricing-features-item">Phone number</li>
+          <li class="pricing-features-item">Country</li>
+
+        </ul>
+        <a href="{% url 'users' %}" class="pricing-button">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/serv.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Public Servants Table</h2>
+        <ul class="pricing-features">
+             <li class="pricing-features-item">Public Servant email</li>
+          <li class="pricing-features-item">Department</li>
+        </ul>
+        <a href="{% url 'publicservants' %}" class="pricing-button is-featured">View Table</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+ <div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/doct.png' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Doctor Table</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Doctor email</li>
+          <li class="pricing-features-item">Doctor degree</li>
+        </ul>
+        <a href="{% url 'doctors' %}" class="pricing-button ">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/special.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Specialize Table </h2>
+        <ul class="pricing-features">
+            <li class="pricing-features-item">Specialize disease ID</li>
+          <li class="pricing-features-item">Specialize email</li>
+
+
+        </ul>
+        <a href="{% url 'specializes' %}" class="pricing-button is-featured">View Table</a>
+      </div>
+
+      <div class="pricing-plan">
+        <img src="{% static 'img/rec.jpeg' %}" alt="" class="pricing-img">
+        <h2 class="pricing-header">Records Table</h2>
+        <ul class="pricing-features">
+             <li class="pricing-features-item">Public Servant email</li>
+          <li class="pricing-features-item">Country Name</li>
+            <li class="pricing-features-item">Disease Code</li>
+          <li class="pricing-features-item">Total death</li>
+            <li class="pricing-features-item">Total patients</li>
+
+        </ul>
+        <a href="{% url 'records' %}" class="pricing-button">View Table</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
